@@ -11,11 +11,7 @@ function filterByRating(
 }
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-  const concatenatedArray: T[] = [];
-  arrays.forEach((element) => {
-    concatenatedArray.push(...element);
-  });
-  return concatenatedArray;
+  return [...arrays].flat();
 }
 
 class Vehicle {
